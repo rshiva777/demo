@@ -1,6 +1,6 @@
 - job:
     name: demoantbuildjob
-    run: playbooks/demoantbuild.yaml
+    run: playbooks/demoantbuildjob.yaml
     parent: base
     nodeset:
       nodes:
