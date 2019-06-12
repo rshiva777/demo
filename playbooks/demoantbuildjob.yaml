@@ -11,4 +11,4 @@
         repo: https://github.com/wakaleo/game-of-life.git
         dest: /home/work/
       when: clean_output is succeeded
-  
+ 
