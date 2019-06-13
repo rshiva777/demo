@@ -1,20 +1,3 @@
-#- job:
- #   name: demoantbuildjob
-  #  run: playbooks/demoantbuildjob.yaml
-   # parent: base
-   #0 nodeset:
-    #  nodes:
-     #   - name: node
-        #  label: ubuntu-bionic
-#- project:
- #   check:
-  #    jobs:
-   #     - demoantbuildjob
-    
-    #gate:
-     # jobs:
-      #  - demoantbuildjob
-        
 - job:
     name: testjob
     run: playbooks/testjob.yaml
@@ -36,5 +19,3 @@
     region2:
       jobs:
         - testjob2
-        
-        
