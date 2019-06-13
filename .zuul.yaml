@@ -1,15 +1,40 @@
+#- job:
+ #   name: demoantbuildjob
+  #  run: playbooks/demoantbuildjob.yaml
+   # parent: base
+   0 nodeset:
+    #  nodes:
+     #   - name: node
+          label: ubuntu-bionic
+#- project:
+ #   check:
+  #    jobs:
+   #     - demoantbuildjob
+    
+    #gate:
+     # jobs:
+      #  - demoantbuildjob
+        
 - job:
-    name: demoantbuildjob
-    run: playbooks/demoantbuildjob.yaml
-    parent: base
+    name: testjob
+    run: playbooks/testjob.yaml
     nodeset:
       nodes:
-        - name: node
-          label: ubuntu-bionic
+       - name: node
+         label: ubuntu-bionic
+- job:
+    name: testjob2
+    run: playbooks/testjob.yaml
+    nodeset:
+      nodes:
+       - name: node_2
+         label: zuul-node2
 - project:
-    check:
+    userbasedcheck:
       jobs:
-        - demoantbuildjob
-    gate:
+        - testjob
+    userbasedcheck2:
       jobs:
-        - demoantbuildjob
+        - testjob2
+        
+        
