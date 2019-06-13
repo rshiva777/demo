@@ -27,13 +27,13 @@
     run: playbooks/testjob.yaml
     nodeset:
       nodes:
-       - name: node_2
-         label: zuul-node2
+       - name: node
+         label: centos76
 - project:
-    userbasedcheck:
+    region1:
       jobs:
         - testjob
-    userbasedcheck2:
+    region2:
       jobs:
         - testjob2
         
