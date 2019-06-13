@@ -2,10 +2,10 @@
  #   name: demoantbuildjob
   #  run: playbooks/demoantbuildjob.yaml
    # parent: base
-   0 nodeset:
+   #0 nodeset:
     #  nodes:
      #   - name: node
-          label: ubuntu-bionic
+        #  label: ubuntu-bionic
 #- project:
  #   check:
   #    jobs:
