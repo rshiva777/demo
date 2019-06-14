@@ -9,8 +9,7 @@
             nodeset:
               nodes:
                - name: node
-                 label: ubuntu-bionic
-           
+                 label: ubuntu-bionic           
     region2:
       jobs:
         - testjob:       
