@@ -5,7 +5,7 @@
 - project:
     region1:
       jobs:
-        - testjob        
+        - testjob:       
             nodeset:
               nodes:
                - name: node
@@ -13,7 +13,7 @@
            
     region2:
       jobs:
-        - testjob        
+        - testjob:       
             nodeset:
               nodes:
               - name:node
