@@ -1,0 +1,5 @@
+- nodeset:
+    name: ubuntu-bionic
+    nodes:
+      - name: node
+        label: ubuntu-bionic
