@@ -7,7 +7,10 @@
     region1:
       jobs:
        - testjob:    
-           nodeset: ubuntu-bionic             
+           nodeset:
+             nodes:
+              - name: node
+                label: ubuntu-bionic
     region2:
       region1:
       jobs:
