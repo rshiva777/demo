@@ -1,21 +1,31 @@
 - job:
     name: testjob
     run: playbooks/testjob.yaml
-    nodeset:
-      nodes:
-       - name: node
-         label: ubuntu-bionic
-- job:
-    name: testjob2
-    run: playbooks/testjob.yaml
-    nodeset:
-      nodes:
-       - name: node
-         label: centos76
+    #nodeset:
+     # nodes:
+      # - name: node
+       #  label: ubuntu-bionic
+#- job:
+ #   name: testjob2
+  #  run: playbooks/testjob.yaml
+   # nodeset:
+    #  nodes:
+     #  - name: node
+      #   label: centos76
 - project:
     region1:
       jobs:
         - testjob
+      nodeset:
+        nodes:
+         - name: node
+           label: ubuntu-bionic
+           
     region2:
       jobs:
-        - testjob2
+        - testjob
+      nodeset:
+        nodes:
+         - name:node
+           label: centos76      
+        
