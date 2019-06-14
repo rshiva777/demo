@@ -2,17 +2,30 @@
     name: testjob
     run: playbooks/testjob.yaml
     parent: base
-    
-- project:
+
+- project-template:
+    name:  indiabuild
+    description: |
+      Will build jobs when commented pull request triggers in India 
+    # Include a check queue so that initially every repo has a check queue
+    # and we can report invalid zuul.yaml files.
     region1:
       jobs:
-       - testjob:    
-           nodeset:
-             nodes:
-              - name: node
-                label: ubuntu-bionic
+       - testjob:
+           nodeset: ubuntu-bionic
+       
+ - project-template:
+    name: USbuild
+    description: |
+      Will build jobs when commented pull request triggers in US 
+    # Include a check queue so that initially every repo has a check queue
+    # and we can report invalid zuul.yaml files.
     region2:
-      region1:
       jobs:
        - testjob:
            nodeset: centos76
+    
+- project:
+    templates:
+      - indiabuild
+      - USbuild
