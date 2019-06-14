@@ -1,9 +1,11 @@
+
 - project:
     region1:
       jobs:
        - job:
          name: testjob
          run: playbooks/testjob.yaml
+         parent: base
          nodeset:
            nodes:
             - name: node
@@ -13,6 +15,7 @@
        - job:
          name: testjob
          run: playbooks/testjob.yaml
+         parent: base
          nodeset:
            nodes:
             - name: node
