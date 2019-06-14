@@ -6,7 +6,7 @@
       nodes:
        - name: node
          label: ubuntu-bionic
-       - name: node
+       - name: node1
          label: centos76
 
 - project:
