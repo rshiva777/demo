@@ -3,7 +3,7 @@
       jobs:
        - job:
          name: testjob
-         run: playbooks/testjob.yaml			
+         run: playbooks/testjob.yaml
          nodeset:
            nodes:
             - name: node
@@ -12,7 +12,7 @@
       jobs:
        - job:
          name: testjob
-         run: playbooks/testjob.yaml			
+         run: playbooks/testjob.yaml
          nodeset:
            nodes:
             - name: node
