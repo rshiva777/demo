@@ -1,19 +1,19 @@
 - project:
     region1:
-      - job:
-        name: testjob
-        run: playbooks/testjob.yaml
-        parent: base
-        nodeset:
-          nodes:
-           - name: node
-             label: ubuntu-bionic
+      jobs:
+       - name: testjob
+         run: playbooks/testjob.yaml
+         parent: base
+         nodeset:
+           nodes:
+            - name: node
+              label: ubuntu-bionic
     region2:
-      - job:
-        name: testjob
-        run: playbooks/testjob.yaml
-        parent: base
-        nodeset:
-          nodes:
-           - name: node
-             label: ubuntu-bionic
+      jobs:
+       - name: testjob
+         run: playbooks/testjob.yaml
+         parent: base
+         nodeset:
+           nodes:
+            - name: node
+              label: ubuntu-bionic
