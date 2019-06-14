@@ -1,15 +1,15 @@
+- job:
+    name: testjob
+    run: playbooks/testjob.yaml
+    parent: base
+    
 - project:
     region1:
       jobs:
        - testjob:
            nodeset: ubuntu-bionic
-       
- - project:
-     region2:
-       jobs:
-        - testjob:
-            nodeset: centos76
-- job:
-    name: testjob
-    run: playbooks/testjob.yaml
-    parent: base
+- project:
+    region2:
+      jobs:
+       - testjob:
+           nodeset: centos76
