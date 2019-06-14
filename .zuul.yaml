@@ -13,8 +13,6 @@
     region1:
       jobs:
         - testjob
-        
-- project:        
     region2:
       jobs:
-        - testjob
+       - testjob
