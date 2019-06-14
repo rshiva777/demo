@@ -6,6 +6,7 @@
     region1:
       jobs:
         - testjob
+        
       nodeset:
         nodes:
          - name: node
@@ -14,6 +15,7 @@
     region2:
       jobs:
         - testjob
+        
       nodeset:
         nodes:
          - name:node
