@@ -1,4 +1,4 @@
-- project-template:
+- project
     name:  indiabuild
     description: |
       Will build jobs when commented pull request triggers in India 
@@ -9,7 +9,7 @@
        - testjob:
            nodeset: ubuntu-bionic
        
- - project-template:
+ - project
     name: USbuild
     description: |
       Will build jobs when commented pull request triggers in US 
@@ -19,11 +19,6 @@
       jobs:
        - testjob:
            nodeset: centos76
-    
-- project:
-    templates:
-      - indiabuild
-      - USbuild
 - job:
     name: testjob
     run: playbooks/testjob.yaml
