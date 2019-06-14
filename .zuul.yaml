@@ -1,3 +1,13 @@
+- nodeset:
+    name: ubuntu-bionic
+    nodes:
+      - name: node
+        label: ubuntu-bionic
+- nodeset:
+    name: centos76
+    nodes:
+      - name: node2
+        label: centos76
 - job:
     name: testjob
     run: playbooks/testjob.yaml
