@@ -8,7 +8,7 @@
            nodes:
             - name: node
               label: ubuntu-bionic
-    region1:
+    region2:
       jobs:
        - job:
          name: testjob
