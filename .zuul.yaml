@@ -11,5 +11,5 @@
     region2:
       region1:
       jobs:
-       - testjob: 
+       - testjob:
            nodeset: centos76
