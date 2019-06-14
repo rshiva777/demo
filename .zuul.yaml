@@ -2,18 +2,18 @@
     region1:
       jobs:
        - testjob:
-         run: playbooks/testjob.yaml
-         parent: base
-         nodeset:
-           nodes:
-            - name: node
-              label: ubuntu-bionic     
+          run: playbooks/testjob.yaml
+          parent: base
+          nodeset:
+            nodes:
+             - name: node
+               label: ubuntu-bionic     
     region2:
       jobs:
        - testjob:
-         run: playbooks/testjob.yaml
-         parent: base
-         nodeset:
-           nodes:
-            - name: node1
-              label: centos76
+          run: playbooks/testjob.yaml
+          parent: base
+          nodeset:
+            nodes:
+             - name: node1
+               label: centos76
