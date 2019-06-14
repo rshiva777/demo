@@ -1,6 +1,7 @@
 - job:
     name: testjob
     run: playbooks/testjob.yaml
+    parent: base
     nodeset:
       nodes:
        - name: node
