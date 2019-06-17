@@ -11,4 +11,20 @@
         repo: https://github.com/wakaleo/game-of-life.git
         dest: /home/work/
       when: clean_output is succeeded
+      
+    - name: Build sample project
+      shell: |
+            ant -f /home/work/build.xml jar
+      register: output
+      
+    - name: Push artifacts to jfrog repository
+      uri:
+        url: http://52.66.131.23:9081/artifactory/generic-local/hello.jar
+        validate_certs: no
+        method: PUT
+        headers:
+          X-JFrog-Art-Api: AKCp5dK4mF6tBdrReiknVmQ8X6zBp6SstMM34jzu6NkfMecn2MQEbh2jp2ma8kKSw3JVybbWP                                                                                       awHpMqwtfStMHDLE8Pch
+        src: /home/work/build/hello.jar
+        status_code: 201
+        remote_src: yes
  
